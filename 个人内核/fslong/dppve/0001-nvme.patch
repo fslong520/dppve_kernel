@@ -1,0 +1,44 @@
+From b3cf46ff3ef0d75238ceeece1f05e4615d0a890c Mon Sep 17 00:00:00 2001
+From: fslong <470657570@qq.com>
+Date: Thu, 8 May 2025 21:37:36 +0800
+Subject: [PATCH] =?UTF-8?q?=E4=BF=AE=E6=94=B9nvme=E9=A9=B1=E5=8A=A8?=
+ =?UTF-8?q?=E7=94=B5=E6=BA=90=E7=AE=A1=E7=90=86?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ drivers/nvme/host/core.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/drivers/nvme/host/core.c b/drivers/nvme/host/core.c
+index 150de63b2..b8caa2881 100644
+--- a/drivers/nvme/host/core.c
++++ b/drivers/nvme/host/core.c
+@@ -64,7 +64,7 @@ static u8 nvme_max_retries = 5;
+ module_param_named(max_retries, nvme_max_retries, byte, 0644);
+ MODULE_PARM_DESC(max_retries, "max number of retries a command may have");
+ 
+-static unsigned long default_ps_max_latency_us = 100000;
++static unsigned long default_ps_max_latency_us = 2000;
+ module_param(default_ps_max_latency_us, ulong, 0644);
+ MODULE_PARM_DESC(default_ps_max_latency_us,
+ 		 "max power saving latency for new devices; use PM QOS to change per device");
+@@ -83,12 +83,12 @@ module_param(apst_secondary_timeout_ms, ulong, 0644);
+ MODULE_PARM_DESC(apst_secondary_timeout_ms,
+ 	"secondary APST timeout in ms");
+ 
+-static unsigned long apst_primary_latency_tol_us = 15000;
++static unsigned long apst_primary_latency_tol_us = 1500;
+ module_param(apst_primary_latency_tol_us, ulong, 0644);
+ MODULE_PARM_DESC(apst_primary_latency_tol_us,
+ 	"primary APST latency tolerance in us");
+ 
+-static unsigned long apst_secondary_latency_tol_us = 100000;
++static unsigned long apst_secondary_latency_tol_us = 10000;
+ module_param(apst_secondary_latency_tol_us, ulong, 0644);
+ MODULE_PARM_DESC(apst_secondary_latency_tol_us,
+ 	"secondary APST latency tolerance in us");
+-- 
+2.43.0
+
