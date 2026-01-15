@@ -1,0 +1,48 @@
+* {
+    transition: background 500ms in_out_cubic, color 500ms in_out_cubic;
+}
+
+Screen {
+    layers: base overlay notes notifications;
+    overflow: hidden;
+    align:center middle;
+}
+
+Label {
+    text-align: center;
+    color:aquamarine;
+}
+
+Title {
+    background: $boost;
+    color: $secondary;
+    padding: 2 4;
+    border-right: vkey $background;
+    dock: top;
+    text-align: center;
+    text-style: bold;
+}
+
+Load_installed Load_available{
+    height: 5;
+    width: auto;
+    border: wide $primary;
+    padding: 1 2;
+    margin: 1 2;
+    box-sizing: border-box;
+}
+
+Load_available,Button {
+    width: 20;
+    margin-top: 1;
+    margin-bottom: 1;
+}
+
+Log {
+    background: $boost;
+    height: auto;
+    border: wide $primary;
+    padding: 1 2;
+    margin: 1 2;
+    box-sizing: border-box;
+}
