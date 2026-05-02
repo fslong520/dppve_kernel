@@ -33,6 +33,3 @@
 
 # linux
 linux/
-
-# Deb packages
-*.deb
